@@ -17,6 +17,9 @@
   "author": "yanca",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.4.1"
+    "cypress": "^14.4.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
