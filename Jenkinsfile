@@ -36,15 +36,16 @@ pipeline {
     }
 
     stage('Desplegar en Tomcat') {
-      steps {
-        bat '''
-          if exist dist rmdir /S /Q dist
-          mkdir dist
-          xcopy src dist /E /Y
-          if exist "%TOMCAT_PATH%" rmdir /S /Q "%TOMCAT_PATH%"
-          xcopy dist "%TOMCAT_PATH%" /E /Y
-        '''
-      }
+    steps {
+        // Borrar si ya existe
+        bat 'if exist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" rmdir /S /Q "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
+
+        // Crear carpeta nueva
+        bat 'mkdir "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
+
+        // Copiar contenido de dist/
+        bat 'xcopy cypress\\dist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" /E /Y /I'
+    }
     }
 
     stage('Notificación Éxito') {
