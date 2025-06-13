@@ -49,7 +49,7 @@ pipeline {
 
     stage('Notificación Éxito') {
       steps {
-        mail to: 'yancarlos_cartagen82171@elpoli.edu.co',
+        mail to: 'yankaxzuleta@gmail.com',
              subject: "✔️ Pipeline Exitoso: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
              body: "La app fue desplegada correctamente en http://localhost:8081/miapp/"
       }
@@ -58,7 +58,7 @@ pipeline {
 
   post {
     failure {
-      mail to: 'yancarlos_cartagen82171@elpoli.edu.co',
+      mail to: 'yankaxzuleta@gmail.com',
            subject: "❌ Pipeline Fallido: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
            body: "Revisa Jenkins para ver el fallo. Puede haber ocurrido en las pruebas Cypress o análisis SonarQube."
     }
