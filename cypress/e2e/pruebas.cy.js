@@ -1,5 +1,5 @@
 describe('Pruebas a la App Web', () => {
-  const url = 'http://localhost:8080/miapp/';
+  const url = 'http://localhost:8081/miapp/';
 
   it('Carga la página correctamente', () => {
     cy.visit(url);
