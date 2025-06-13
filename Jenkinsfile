@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clonar Repositorio') {
       steps {
-        git branch: 'pruebas', url: 'https://github.com/tu-usuario/Cypress-prueba.git'
+        git branch: 'pruebas', url: 'https://github.com/Yankarloz/cypress-prueba.git'
       }
     }
 
