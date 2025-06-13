@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-06-13T17:11:56.394Z",
+    "end": "2025-06-13T17:12:01.231Z",
+    "duration": 4837,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ee12dd46-e6dc-4308-9323-5810d7bb72f8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pruebas.cy.js",
+      "file": "cypress\\e2e\\pruebas.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c2132e1a-78ce-490a-b172-0e4cce2ca628",
+          "title": "Pruebas a la App Web",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Carga la página correctamente",
+              "fullTitle": "Pruebas a la App Web Carga la página correctamente",
+              "timedOut": null,
+              "duration": 2638,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(url);\ncy.contains('¡Bienvenido a mi aplicación web!');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135035:76)\n    at visitFailedByErr (http://localhost:52069/__cypress/runner/cypress_runner.js:134441:12)\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135018:13)\n    at tryCatcher (http://localhost:52069/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52069/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52069/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:52069/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:52069/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:52069/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:52069/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://prueba-cypress/./cypress/e2e/pruebas.cy.js:5:7)",
+                "diff": null
+              },
+              "uuid": "ea71186a-983e-4bb4-8240-6eef57efed79",
+              "parentUUID": "c2132e1a-78ce-490a-b172-0e4cce2ca628",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cambia el texto al hacer clic en botón",
+              "fullTitle": "Pruebas a la App Web Cambia el texto al hacer clic en botón",
+              "timedOut": null,
+              "duration": 1279,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(url);\ncy.get('#cambiarTexto').click();\ncy.get('#mensaje').should('contain', 'Texto cambiado con éxito');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135035:76)\n    at visitFailedByErr (http://localhost:52069/__cypress/runner/cypress_runner.js:134441:12)\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135018:13)\n    at tryCatcher (http://localhost:52069/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52069/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52069/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:52069/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:52069/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:52069/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:52069/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://prueba-cypress/./cypress/e2e/pruebas.cy.js:10:7)",
+                "diff": null
+              },
+              "uuid": "98f6a9fb-f619-4e99-8365-0c73a1861837",
+              "parentUUID": "c2132e1a-78ce-490a-b172-0e4cce2ca628",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Muestra saludo al enviar nombre",
+              "fullTitle": "Pruebas a la App Web Muestra saludo al enviar nombre",
+              "timedOut": null,
+              "duration": 129,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(url);\ncy.get('#nombre').type('Yancarlos');\ncy.get('#formulario').submit();\ncy.get('#resultado').should('contain', '¡Hola, Yancarlos!');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:8081/miapp/\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135035:76)\n    at visitFailedByErr (http://localhost:52069/__cypress/runner/cypress_runner.js:134441:12)\n    at <unknown> (http://localhost:52069/__cypress/runner/cypress_runner.js:135018:13)\n    at tryCatcher (http://localhost:52069/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:52069/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:52069/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:52069/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:52069/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:52069/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:52069/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:52069/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://prueba-cypress/./cypress/e2e/pruebas.cy.js:16:7)",
+                "diff": null
+              },
+              "uuid": "dff0ebb5-9be1-4732-8adb-cbf332228cfb",
+              "parentUUID": "c2132e1a-78ce-490a-b172-0e4cce2ca628",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ea71186a-983e-4bb4-8240-6eef57efed79",
+            "98f6a9fb-f619-4e99-8365-0c73a1861837",
+            "dff0ebb5-9be1-4732-8adb-cbf332228cfb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4046,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

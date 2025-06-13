@@ -19,6 +19,19 @@ pipeline {
       }
     }
 
+        stage('Desplegar en Tomcat') {
+    steps {
+        // Borrar si ya existe
+        bat 'if exist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" rmdir /S /Q "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
+
+        // Crear carpeta nueva
+        bat 'mkdir "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
+
+        // Copiar contenido de dist/
+        bat 'xcopy cypress\\dist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" /E /Y /I'
+    }
+    }
+
     stage('Ejecutar Pruebas Cypress') {
       steps {
         bat 'npm run test:e2e'
@@ -33,19 +46,6 @@ pipeline {
           }
         }
       }
-    }
-
-    stage('Desplegar en Tomcat') {
-    steps {
-        // Borrar si ya existe
-        bat 'if exist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" rmdir /S /Q "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
-
-        // Crear carpeta nueva
-        bat 'mkdir "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp"'
-
-        // Copiar contenido de dist/
-        bat 'xcopy cypress\\dist "C:/Users/Yanca/Documents/Universidad/apache-tomcat-9.0.106/webapps/miapp" /E /Y /I'
-    }
     }
 
     stage('Notificación Éxito') {
