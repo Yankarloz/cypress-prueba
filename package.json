@@ -7,7 +7,8 @@
     "test": "test",
     "cy:open": "cypress open",
     "cy:runChrome": "cypress run --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
-    "build": "if exist dist rmdir /S /Q dist && mkdir dist && xcopy src dist /E /Y"
+    "build": "if exist dist rmdir /S /Q dist && mkdir dist && xcopy src dist /E /Y",
+    "test:e2e": "cypress run --spec 'cypress/e2e/pruebas.cy.js' --browser chrome"
   },
   "keywords": [
     "e2e",
